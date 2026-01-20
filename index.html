@@ -1779,7 +1779,7 @@
                 </div>
                 <div class="header-control">
                     <label>Simulations:</label>
-                    <input type="number" id="num-sims" value="10000" min="100" max="50000" step="1000">
+                    <input type="number" id="num-sims" value="999" min="100" max="50000" step="100">
                 </div>
             </div>
         </header>
@@ -2743,9 +2743,9 @@ function updateSingleTestComparison(cumSens, cumSpec) {
 }
 
 function updateResults() {
-  const pop = parseInt(document.getElementById('population')?.value) || 100000;
+  const pop = parseInt(document.getElementById('population')?.value) || 9990;
   const prev = (parseFloat(document.getElementById('prevalence')?.value) || 1) / 100;
-  const numSims = parseInt(document.getElementById('num-sims')?.value) || 10000;
+  const numSims = parseInt(document.getElementById('num-sims')?.value) || 999;
 
   document.getElementById('pop-display').textContent = pop.toLocaleString();
   const totalCases = Math.round(pop * prev);
@@ -3219,9 +3219,9 @@ function initPresetButtons() {
 
 function encodeStateToURL() {
   const state = {
-    pop: parseInt(document.getElementById('population')?.value) || 100000,
+    pop: parseInt(document.getElementById('population')?.value) || 9990,
     prev: parseFloat(document.getElementById('prevalence')?.value) || 1,
-    sims: parseInt(document.getElementById('num-sims')?.value) || 10000,
+    sims: parseInt(document.getElementById('num-sims')?.value) || 999,
     pipeline: pipeline.map(b => ({
       t: b.type,
       a: b.auc,
@@ -3310,7 +3310,7 @@ document.addEventListener('DOMContentLoaded', init);
 
 // Resize/orientation handler for charts
 function handleResize() {
-  const pop = parseInt(document.getElementById('population')?.value) || 100000;
+  const pop = parseInt(document.getElementById('population')?.value) || 9990;
   const prev = (parseFloat(document.getElementById('prevalence')?.value) || 1) / 100;
   renderPopulationChart(pop, prev, pipeline);
 }
@@ -3333,7 +3333,7 @@ setTimeout(() => {
 // =========================
 
 function getConfigJSON() {
-  const pop = parseInt(document.getElementById('population')?.value) || 100000;
+  const pop = parseInt(document.getElementById('population')?.value) || 9990;
   const prev = parseFloat(document.getElementById('prevalence')?.value) || 1;
   const config = {
     population: pop,
