@@ -2,7 +2,7 @@
 
 Interactive tool for designing and evaluating multi-stage IBD screening pipelines.
 
-**Live demo:** https://asazonov.github.io/hierarchical/
+**Live demo:** https://sazonovsgrouppredict.github.io/hierarchical/
 
 ## Features
 
