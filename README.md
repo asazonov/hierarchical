@@ -23,7 +23,7 @@ Uses a binormal signal detection model where cases and controls follow normal di
 2. Adjust AUC, cohort selection %, and cost for each block
 3. View results in real-time on the right panel
 4. Open the Dashboard for detailed visualizations
-5. Share your pipeline configuration via the Share button
+5. Use Config to save/load pipeline setups as JSON
 
 ## Citation
 
