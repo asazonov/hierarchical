@@ -1179,12 +1179,11 @@
         /* Correlations toggle button - hidden on desktop */
         .correlations-toggle-btn {
             display: none;
-            width: 100%;
-            padding: 10px;
+            padding: 8px 12px;
             background: #f1f5f9;
             border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            font-size: 0.75rem;
+            border-radius: 6px;
+            font-size: 0.7rem;
             font-weight: 500;
             color: #475569;
             cursor: pointer;
@@ -1390,8 +1389,10 @@
             }
 
             .correlations-toggle-btn {
-                display: block;
+                display: inline-block;
                 order: 4;
+                width: auto;
+                align-self: flex-start;
             }
 
             .palette-blocks-grid {
@@ -2022,7 +2023,7 @@
                 </div>
             </div>
 
-            <button class="correlations-toggle-btn" id="correlations-toggle">Correlations</button>
+            <button class="correlations-toggle-btn" id="correlations-toggle">Screening layer correlations</button>
 
             <button class="reset-btn" id="reset-btn">Reset Pipeline</button>
 
