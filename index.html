@@ -1859,7 +1859,7 @@
 
                     <div class="palette-block block-blood" draggable="true" data-type="blood">
                         <div class="palette-block-icon">🩸</div>
-                        <div class="palette-block-name">Blood</div>
+                        <div class="palette-block-name">Bloodwork</div>
                         <div class="palette-block-stats">
                             <span>AUC: 0.75</span>
                             <span>€20</span>
@@ -2036,7 +2036,7 @@
 const blockTypes = {
   genetic: { name: 'Polygenic Risk Score', icon: '🧬', className: 'block-genetic', defaultAuc: 0.75, defaultCohortPct: 10, defaultCost: 50 },
   demographic: { name: 'Demographics + History', icon: '👥', className: 'block-demographic', defaultAuc: 0.70, defaultCohortPct: 20, defaultCost: 2 },
-  blood: { name: 'Blood Biomarkers', icon: '🩸', className: 'block-blood', defaultAuc: 0.75, defaultCohortPct: 10, defaultCost: 20 },
+  blood: { name: 'Bloodwork', icon: '🩸', className: 'block-blood', defaultAuc: 0.75, defaultCohortPct: 10, defaultCost: 20 },
   fecal: { name: 'Fecal Calprotectin', icon: '💩', className: 'block-fecal', defaultAuc: 0.85, defaultCohortPct: 5, defaultCost: 25 },
   omics: { name: 'Omics Panel', icon: '🧫', className: 'block-omics', defaultAuc: 0.85, defaultCohortPct: 5, defaultCost: 100 },
   imaging: { name: 'Imaging Biomarkers', icon: '📷', className: 'block-imaging', defaultAuc: 0.80, defaultCohortPct: 5, defaultCost: 200 },
@@ -2047,7 +2047,7 @@ const blockTypes = {
 // Pipeline state
 let pipeline = [
   { id: 1, type: 'genetic', name: 'Polygenic Risk Score', auc: 0.75, cohortPct: 27.47, cost: 50, routinelyAvailable: true },
-  { id: 2, type: 'blood', name: 'Blood Biomarkers', auc: 0.75, cohortPct: 28.00, cost: 20, routinelyAvailable: true },
+  { id: 2, type: 'blood', name: 'Bloodwork', auc: 0.75, cohortPct: 28.00, cost: 20, routinelyAvailable: true },
   { id: 3, type: 'fecal', name: 'Fecal Calprotectin', auc: 0.85, cohortPct: 19.50, cost: 25, routinelyAvailable: false },
   { id: 4, type: 'omics', name: 'Omics Panel', auc: 0.85, cohortPct: 35.58, cost: 100, routinelyAvailable: false },
   { id: 5, type: 'imaging', name: 'Imaging Biomarkers', auc: 0.90, cohortPct: 45.73, cost: 200, routinelyAvailable: false }
@@ -2064,7 +2064,7 @@ const presets = {
   default: {
     pipeline: [
       { type: 'genetic', name: 'Polygenic Risk Score', auc: 0.75, cohortPct: 58.72, cost: 50, routinelyAvailable: true },
-      { type: 'blood', name: 'Blood Biomarkers', auc: 0.72, cohortPct: 58.87, cost: 20, routinelyAvailable: true },
+      { type: 'blood', name: 'Bloodwork', auc: 0.72, cohortPct: 58.87, cost: 20, routinelyAvailable: true },
       { type: 'fecal', name: 'Fecal Calprotectin', auc: 0.85, cohortPct: 22.63, cost: 25, routinelyAvailable: false },
       { type: 'omics', name: 'Omics Panel', auc: 0.85, cohortPct: 25.57, cost: 100, routinelyAvailable: false },
       { type: 'imaging', name: 'Imaging Biomarkers', auc: 0.90, cohortPct: 73.79, cost: 200, routinelyAvailable: false }
@@ -2073,7 +2073,7 @@ const presets = {
   },
   cost: {
     pipeline: [
-      { type: 'blood', name: 'Blood Biomarkers', auc: 0.72, cohortPct: 15, cost: 20, routinelyAvailable: true },
+      { type: 'blood', name: 'Bloodwork', auc: 0.72, cohortPct: 15, cost: 20, routinelyAvailable: true },
       { type: 'genetic', name: 'Polygenic Risk Score', auc: 0.75, cohortPct: 25, cost: 50, routinelyAvailable: true },
       { type: 'fecal', name: 'Fecal Calprotectin', auc: 0.85, cohortPct: 35, cost: 25, routinelyAvailable: false }
     ],
@@ -2082,7 +2082,7 @@ const presets = {
   nospared: {
     pipeline: [
       { type: 'genetic', name: 'Polygenic Risk Score', auc: 0.75, cohortPct: 30, cost: 50, routinelyAvailable: true },
-      { type: 'blood', name: 'Blood Biomarkers', auc: 0.75, cohortPct: 35, cost: 20, routinelyAvailable: true },
+      { type: 'blood', name: 'Bloodwork', auc: 0.75, cohortPct: 35, cost: 20, routinelyAvailable: true },
       { type: 'omics', name: 'Omics Panel', auc: 0.88, cohortPct: 40, cost: 150, routinelyAvailable: false },
       { type: 'fecal', name: 'Fecal Calprotectin', auc: 0.85, cohortPct: 45, cost: 25, routinelyAvailable: false },
       { type: 'imaging', name: 'Imaging Biomarkers', auc: 0.92, cohortPct: 55, cost: 300, routinelyAvailable: false },
