@@ -1268,20 +1268,33 @@
                 -webkit-overflow-scrolling: touch;
             }
 
-            /* Hide description, presets and correlations on mobile, show only blocks */
+            /* Mobile: compact layout */
             .palette-description,
-            .block-palette .palette-section:first-child,
-            .block-palette .palette-section:nth-child(3) {
+            .correlations-section,
+            .blocks-section .palette-title,
+            .blocks-section .palette-instructions,
+            .presets-section .palette-title {
                 display: none;
             }
 
-            .block-palette .palette-section:nth-child(2) {
+            .presets-section {
                 flex-shrink: 0;
             }
 
-            .block-palette .palette-section:nth-child(2) .palette-title,
-            .block-palette .palette-section:nth-child(2) .palette-instructions {
-                display: none;
+            .preset-buttons {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+            }
+
+            .preset-btn {
+                padding: 6px 10px;
+                font-size: 0.7rem;
+                white-space: nowrap;
+            }
+
+            .blocks-section {
+                flex-shrink: 0;
             }
 
             .palette-blocks-grid {
@@ -1816,7 +1829,7 @@
         <!-- Left: Block Palette -->
         <aside class="block-palette">
             <p class="palette-description">Build multi-stage IBD prediction pipelines by combining screening steps. Adjust AUC and selection thresholds to model different strategies and compare costs vs. detection rates.</p>
-            <div class="palette-section">
+            <div class="palette-section presets-section">
                 <div class="palette-title">Presets</div>
                 <div class="preset-buttons">
                     <button class="preset-btn" data-preset="default">Default (ambitious)</button>
@@ -1825,7 +1838,7 @@
                 </div>
             </div>
 
-            <div class="palette-section">
+            <div class="palette-section blocks-section">
                 <div class="palette-title">Screening Blocks</div>
                 <p class="palette-instructions">Tap or drag blocks to add screening steps</p>
 
@@ -1904,7 +1917,7 @@
                 </div>
             </div>
 
-            <div class="palette-section">
+            <div class="palette-section correlations-section">
                 <div class="palette-title">Layer Correlations</div>
                 <p class="palette-instructions">Define correlations between screening layers (0-1)</p>
                 <div class="correlation-matrix" id="correlation-matrix">
